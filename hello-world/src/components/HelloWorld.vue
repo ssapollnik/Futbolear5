@@ -1,41 +1,57 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+    
+    <button @click="newMatch" class="btn btn-success">1Create match</button>
+
+    <ul v-for="partido in partidos" :key="partido.admin">
+      <li>Nombre: {{partido.nombre}}</li>
+      <li>Admin: {{partido.admin}}</li>
+      <li>Fecha: {{partido.fecha}}</li>
+      <li>Hora: {{partido.hora}}</li>
+      <li>Jugadores: {{partido.jugadores}}</li>
+      <button @click="auth" class="btn btn-success">Add</button>
     </ul>
   </div>
 </template>
 
 <script>
+
+
+        
+        
+    
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data(){return {
+    partidos: [
+    {
+      "nombre": "Partido de Seba",
+      "admin": "sebacapo36@msn.com.ar",
+      "fecha": "22/05/2019",
+      "hora": '20:00',
+      "jugadores": []  
+    },
+    {
+        "nombre": "Partido de Max",
+        "admin": "maxcapo10@msn.com.ar",
+        "fecha": "27/05/2019",
+        "hora": '21:00',
+        "jugadores": []        
+    }
+  ]
+
+  }},
+  methods: {
+            newMatch: function(){
+              this.$route.router.go('/newMatch');
+
+
+            }
+        } 
 }
 </script>
 
