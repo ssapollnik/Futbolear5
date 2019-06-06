@@ -1,46 +1,83 @@
 <template>
-  <div class="hello">
+  <div id="newMatch" class="newMatch">
+    <p>
+    <label for="name">Nombre</label>
+    <input
+      id="name"
+      v-model="partidoNuevo.nombre"
+      type="text"
+      name="name"
+    >
+  </p>
 
-    <button @click="newMatch" class="btn btn-success">Create match</button>
-    <router-link to="./newMatch.html" tag="button">foo</router-link>
+    <p>
+    <label for="admin">Admin</label>
+    <input
+      id="admin"
+      v-model="partidoNuevo.admin"
+      type="text"
+      name="admin"
+    >
+  </p>
 
-    <ul v-for="partido in partidos" :key="partido.admin">
-      <li>Nofegweferwmbre: {{partido.nombre}}</li>
-      <li>Admin: {{partido.admin}}</li>
-      <li>Fecha: {{partido.fecha}}</li>
-      <li>Hora: {{partido.hora}}</li>
-      <li>Jugadores: {{partido.jugadores}}</li>
-      <button @click="auth" class="btn btn-success">Add</button>
-    </ul>
+    <p>
+    <label for="fecha">Fecha</label>
+    <input
+      id="fecha"
+      v-model="partidoNuevo.fecha"
+      type="text"
+      name="fecha"
+    >
+  </p>
+
+  <p>
+    <label for="hora">Hora</label>
+    <input
+      id="hora"
+      v-model="partidoNuevo.hora"
+      type="text"
+      name="hora"
+    >
+  </p>
+
+  <button @click.prevent="agregarPartido" class="btn btn-success">Crear</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+name: 'newMatch',
   props: {
     msg: String
   },
-  data(){return {
-    partidos: [
-    {
-      "nombre": "Partido de Seba",
-      "admin": "sebacapo36@msn.com.ar",
-      "fecha": "22/05/2019",
-      "hora": '20:00',
-      "jugadores": []  
-    },
-    {
-        "nombre": "Partido de Max",
-        "admin": "maxcapo10@msn.com.ar",
-        "fecha": "27/05/2019",
-        "hora": '21:00',
-        "jugadores": []        
+  data() {
+    return {
+      partidos: [],
+      partidoNuevo: {
+      nombre: null,
+      admin: null,
+      fecha: null,
+      hora: null
+    }}
+  },
+  methods: {
+    agregarPartido() {
+      const partido = {nombre: null, admin: null, fecha: null, hora: null}
+      partido.nombre = this.partidoNuevo.nombre
+      partido.admin = this.partidoNuevo.admin
+      partido.fecha = this.partidoNuevo.fecha
+      partido.hora = this.partidoNuevo.hora
+      console.log(JSON.stringify(partido))
+      this.partidos.push(partido)
+      this.inicializarNuevoPartido()
+      },
+      
+      inicializarNuevoPartido(){
+        this.partidoNuevo.nombre = null
+        this.partidoNuevo.estreno = null
+      }
     }
-  ]
-
-  }}
-}
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -1,26 +1,19 @@
 <template>
   <div class="hello">
     
-    <button @click="newMatch" class="btn btn-success">1Create match</button>
+    <button class="btn btn-success">Hello World - Create match</button>
 
     <ul v-for="partido in partidos" :key="partido.admin">
       <li>Nombre: {{partido.nombre}}</li>
       <li>Admin: {{partido.admin}}</li>
       <li>Fecha: {{partido.fecha}}</li>
       <li>Hora: {{partido.hora}}</li>
-      <li>Jugadores: {{partido.jugadores}}</li>
-      <button @click="auth" class="btn btn-success">Add</button>
+      <button class="btn btn-success">Add</button>
     </ul>
   </div>
 </template>
 
 <script>
-
-
-        
-        
-    
-
 export default {
   name: 'HelloWorld',
   props: {
@@ -43,15 +36,7 @@ export default {
         "jugadores": []        
     }
   ]
-
-  }},
-  methods: {
-            newMatch: function(){
-              this.$route.router.go('/newMatch');
-
-
-            }
-        } 
+  }} 
 }
 </script>
 
