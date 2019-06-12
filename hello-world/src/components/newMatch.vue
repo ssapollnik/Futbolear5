@@ -74,7 +74,9 @@ name: 'newMatch',
       
       inicializarNuevoPartido(){
         this.partidoNuevo.nombre = null
-        this.partidoNuevo.estreno = null
+        this.partidoNuevo.admin = null
+        this.partidoNuevo.fecha = null
+        this.partidoNuevo.hora = null
       }
     }
   }
