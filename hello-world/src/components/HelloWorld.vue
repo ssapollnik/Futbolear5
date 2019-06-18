@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-    
-    <button class="btn btn-success">Hello World - Create match</button>
 
     <ul v-for="partido in partidos" :key="partido.admin">
       <li>Nombre: {{partido.nombre}}</li>
