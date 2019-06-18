@@ -54,14 +54,16 @@ name: 'newMatch',
     return {
       partidos: [],
       partidoNuevo: {
-      nombre: null,
-      admin: null,
-      fecha: null,
-      hora: null
-    }}
+        nombre: null,
+        admin: null,
+        fecha: null,
+        hora: null
+      },
+      url: "https://demo8070547.mockable.io/add"
+    }
   },
   methods: {
-    agregarPartido() {
+    /*agregarPartido() {
       const partido = {nombre: null, admin: null, fecha: null, hora: null}
       partido.nombre = this.partidoNuevo.nombre
       partido.admin = this.partidoNuevo.admin
@@ -70,16 +72,25 @@ name: 'newMatch',
       console.log(JSON.stringify(partido))
       this.partidos.push(partido)
       this.inicializarNuevoPartido()
-      },
+    },
+    */
+    agregarPartido() {
+      this.axios.post(this.url, this.partidoNuevo).then(response => {
+        console.log(response);
+        let nuevoPartido = response.data;
+        this.partidos.push(nuevoPartido);
+        this.inicializarNuevoPartido();
+      });
+    }, 
       
-      inicializarNuevoPartido(){
-        this.partidoNuevo.nombre = null
-        this.partidoNuevo.admin = null
-        this.partidoNuevo.fecha = null
-        this.partidoNuevo.hora = null
-      }
+    inicializarNuevoPartido(){
+      this.partidoNuevo.nombre = null
+      this.partidoNuevo.admin = null
+      this.partidoNuevo.fecha = null
+      this.partidoNuevo.hora = null
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

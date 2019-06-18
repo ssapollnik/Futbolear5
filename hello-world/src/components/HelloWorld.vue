@@ -14,29 +14,44 @@
 </template>
 
 <script>
+//import PartidoService from "./services/partido.services";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
-  data(){return {
-    partidos: [
-    {
-      "nombre": "Partido de Seba",
-      "admin": "sebacapo36@msn.com.ar",
-      "fecha": "22/05/2019",
-      "hora": '20:00',
-      "jugadores": []  
-    },
-    {
-        "nombre": "Partido de Max",
-        "admin": "maxcapo10@msn.com.ar",
-        "fecha": "27/05/2019",
-        "hora": '21:00',
-        "jugadores": []        
+  data(){
+    return {
+      partidos: [],
+      partidoSeleccionado: null,
+      url: "https://demo8070547.mockable.io/partido"
     }
-  ]
-  }} 
+  },
+  created() {
+    this.axios.get(this.url).then(respuesta => {
+      //console.log(respuesta);
+      this.partidos = respuesta.data;
+    });
+  },
+  methods: {
+    async getPartido(partidoId) {
+      let partido = await this.axios.get(`${this.url}/${partidoId}`);
+      this.partidoSeleccionado = partido;
+    },
+    /*
+    async eliminar(partidoId) {
+      
+      try {
+        let response = await this.axios.delete(`${this.url}/${partido._id}`);
+        //console.log(response);
+        this.partidos.splice(this.partidos.indexOf(partido), 1);
+      } catch (error) {
+        this.showAlert = true;
+        this.mensajeAlert = "No se pudo eliminar el partido";
+      }
+    }*/
+  } 
 }
 </script>
 
