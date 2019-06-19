@@ -30,7 +30,8 @@ export default {
     return {
       partidos: [],
       partidoSeleccionado: null,
-      url: "https://demo8070547.mockable.io/partido"
+      //url: "https://demo8070547.mockable.io/partido"
+      url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/get"
     }
   },
   created() {

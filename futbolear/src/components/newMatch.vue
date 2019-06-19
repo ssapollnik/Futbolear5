@@ -73,7 +73,8 @@ name: 'newMatch',
         fecha: null,
         hora: null
       },
-      url: "https://demo8070547.mockable.io/add"
+      //url: "https://demo8070547.mockable.io/add"
+      url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/posts"
     }
   },
   methods: {
