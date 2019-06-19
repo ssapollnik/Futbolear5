@@ -26,7 +26,7 @@
     "posts": [
       { "id": 1, "nombre": "Sebastian", "admin": "seba@ort.edu.ar", "fecha": "10/07/2019", "hora": "19:30" },
       { "id": 2, "nombre": "Santi", "admin": "santi@ort.edu.ar", "fecha": "10/07/2020", "hora": "21:30" },
-      { "id": 3, "nombre": "Max", "admin": "max@ort.edu.ar", "fecha": "10/06/2020", "hora": "21:40" },
+      { "id": 3, "nombre": "Max", "admin": "max@ort.edu.ar", "fecha": "10/06/2020", "hora": "21:40" }
     ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
