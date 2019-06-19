@@ -3,10 +3,10 @@
     <div id="bannerLogo"  class="homeBackground">
     <img alt="Vue logo" style="max-width: 500px" src="./assets/logo.png">
     </div>
-    <div id="menu" style="background-color: white">
-    <b-nav tabs align="center">
-        <b-nav-item ><router-link to='/'>Partidos</router-link></b-nav-item>
-        <b-nav-item><router-link to='/newMatch'>Crear Partido</router-link></b-nav-item>
+    <div id="menu" style="background-color:lightblue">
+    <b-nav tabs fill align="center">
+        <b-nav-item active><router-link to='/'>Partidos</router-link></b-nav-item>
+        <b-nav-item active><router-link to='/newMatch'>Crear Partido</router-link></b-nav-item>
     </b-nav>
     </div>
     <div id="listado">

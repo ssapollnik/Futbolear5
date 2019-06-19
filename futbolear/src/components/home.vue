@@ -4,6 +4,7 @@
     <b-table striped hover :items="partidos">
     </b-table>
   </div>
+  <!--
   <div id="lista">
     <ul v-for="partido in partidos" :key="partido.admin">
       <li>Nombre: {{partido.nombre}}</li>
@@ -13,6 +14,7 @@
       <button class="btn btn-success">Entrar</button>
     </ul>
   </div>
+  -->
   </div>
 </template>
 
