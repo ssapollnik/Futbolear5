@@ -12,7 +12,9 @@
         "nombre": "Santi",
         "admin": "santi@ort.edu.ar",
         "fecha": "07/07/2019",
-        "hora": "20:00"
+        "hora": "20:00",
+        "direccion": "juan b justo 5877",
+        "publico": "si"
     },
     {
         "id": 3,
