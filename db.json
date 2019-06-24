@@ -5,7 +5,9 @@
         "nombre": "Sebastian",
         "admin": "seba@ort.edu.ar",
         "fecha": "10/07/2019",
-        "hora": "19:30"
+        "hora": "19:30",
+        "direccion": "Yatay 240",
+        "publico": "no"
     },
     {
         "id": 2,
@@ -13,7 +15,7 @@
         "admin": "santi@ort.edu.ar",
         "fecha": "07/07/2019",
         "hora": "20:00",
-        "direccion": "juan b justo 5877",
+        "direccion": "Río de Janeiro 471",
         "publico": "si"
     },
     {
@@ -21,7 +23,9 @@
         "nombre": "Max",
         "admin": "max@ort.edu.ar",
         "fecha": "15/07/2019",
-        "hora": "15:30"
+        "hora": "15:30",
+        "direccion": "Acevedo 87",
+        "publico": "si"
     }
     ],
     
