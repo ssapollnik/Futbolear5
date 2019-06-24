@@ -1,26 +1,26 @@
 <template>
   <div>
+  <!--
     <div id="tablaPartidos">
     <b-table striped hover :items="partidos">
     </b-table>
   </div>
-  <!--
+  
+    -->
   <div id="lista">
     <ul v-for="partido in partidos" :key="partido.admin">
       <li>Nombre: {{partido.nombre}}</li>
       <li>Admin: {{partido.admin}}</li>
       <li>Fecha: {{partido.fecha}}</li>
       <li>Hora: {{partido.hora}}</li>
-      <button class="btn btn-success">Entrar</button>
+      <button class="btn btn-success" @click.prevent="getPartido(partido.id)"><router-link v-bind:to="'/detalles/' + partido.id"> Entrar</router-link></button>
     </ul>
   </div>
-  -->
+  
   </div>
 </template>
 
 <script>
-//import PartidoService from "./services/partido.services";
-
 export default {
   name: 'futbolear',
   props: {
@@ -36,7 +36,6 @@ export default {
   },
   created() {
     this.axios.get(this.url).then(respuesta => {
-      //console.log(respuesta);
       this.partidos = respuesta.data;
     });
   },
@@ -45,17 +44,17 @@ export default {
       let partido = await this.axios.get(`${this.url}/${partidoId}`);
       this.partidoSeleccionado = partido;
     },
-    async eliminar(partidoId) {
-      
+    /*
+    async eliminar(partidoId) {  
       try {
         let response = await this.axios.delete(`${this.url}/${partidoId}`);
-        //console.log(response);
         this.partidos.splice(this.partidos.indexOf(partido), 1);
       } catch (error) {
         this.showAlert = true;
         this.mensajeAlert = "No se pudo eliminar el partido";
       }
     }
+    */
   } 
 }
 </script>
