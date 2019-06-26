@@ -1,40 +1,9 @@
 {
-    "get":[
-    {
-        "id": 1,
-        "nombre": "Sebastian",
-        "admin": "seba@ort.edu.ar",
-        "fecha": "10/07/2019",
-        "hora": "19:30",
-        "direccion": "Yatay 240",
-        "publico": "no"
-    },
-    {
-        "id": 2,
-        "nombre": "Santi",
-        "admin": "santi@ort.edu.ar",
-        "fecha": "07/07/2019",
-        "hora": "20:00",
-        "direccion": "Río de Janeiro 471",
-        "publico": "si"
-    },
-    {
-        "id": 3,
-        "nombre": "Max",
-        "admin": "max@ort.edu.ar",
-        "fecha": "15/07/2019",
-        "hora": "15:30",
-        "direccion": "Acevedo 87",
-        "publico": "si"
-    }
-    ],
-    
     "posts": [
-    { "id": 1, "nombre": "Max","admin": "max@ort.edu.ar", "fecha": "15/07/2019", "hora": "15:30" },
-    { "id": 2, "nombre": "Santi","admin": "max@ort.edu.ar", "fecha": "15/07/2019", "hora": "15:30" },
-    { "id": 3, "nombre": "Seba","admin": "max@ort.edu.ar", "fecha": "15/07/2019", "hora": "15:30" }
-  ],
-    
+      { "id": 1, "title": "Post 1" },
+      { "id": 2, "title": "Post 2" },
+      { "id": 3, "title": "Post 3" }
+    ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
       { "id": 2, "body": "some comment", "postId": 1 }
