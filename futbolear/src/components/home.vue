@@ -1,12 +1,8 @@
 <template>
   <div>
-  <!--
-    <div id="tablaPartidos">
-    <b-table striped hover :items="partidos">
-    </b-table>
-  </div>
-  
-    -->
+
+  <h1>Partidos</h1>
+
   <div id="lista">
     <ul v-for="partido in partidos" :key="partido.admin">
       <li>Nombre: {{partido.nombre}}</li>
@@ -30,7 +26,6 @@ export default {
     return {
       partidos: [],
       partidoSeleccionado: null,
-      //url: "https://demo8070547.mockable.io/partido"
       url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/get"
     }
   },
@@ -43,18 +38,7 @@ export default {
     async getPartido(partidoId) {
       let partido = await this.axios.get(`${this.url}/${partidoId}`);
       this.partidoSeleccionado = partido;
-    },
-    /*
-    async eliminar(partidoId) {  
-      try {
-        let response = await this.axios.delete(`${this.url}/${partidoId}`);
-        this.partidos.splice(this.partidos.indexOf(partido), 1);
-      } catch (error) {
-        this.showAlert = true;
-        this.mensajeAlert = "No se pudo eliminar el partido";
-      }
     }
-    */
   } 
 }
 </script>

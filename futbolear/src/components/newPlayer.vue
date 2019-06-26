@@ -1,5 +1,6 @@
 <template>
   <div id="newMatch" class="newMatch">
+    <h1>Crear Jugador</h1>
     <div>
       <div style="margin-right: 10px">
     <label for="name">Nombre</label>
@@ -41,7 +42,7 @@
   </div>
 
 <div style="margin-top: 10px">
-  <button @click.prevent="agregarPartido" class="btn btn-success">Crear jugador</button></div>
+  <button @click.prevent="agregarJugador" class="btn btn-success">Crear jugador</button></div>
   </div>
 </template>
 
@@ -59,7 +60,6 @@ name: 'newMatch',
         apellido: null,
         mail: null
       },
-      //url: "https://demo8070547.mockable.io/add"
       url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/posts"
     }
   },
@@ -69,7 +69,7 @@ name: 'newMatch',
         console.log(response);
         let nuevoJugador = response.data;
         this.jugadores.push(nuevoJugador);
-        this.inicializarNuevoPartido();
+        this.inicializarNuevoJugador();
       });
     }, 
       

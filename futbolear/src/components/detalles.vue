@@ -15,7 +15,7 @@
       <li>Fecha: {{partido.fecha}}</li>
       <li>Hora: {{partido.hora}}</li>
       <li>Direccion: {{partido.direccion}}</li>
-      <button @click.prevent="unirAPartido" class="btn btn-success">Unirme al partido</button>
+      <button class="btn btn-success"><router-link v-bind:to="'/newPlayer'">Unirme al partido</router-link></button>
     </ul>
     <div id="tablaJugadores">
     <b-table striped hover :items="jugadores">
@@ -46,6 +46,10 @@ export default {
     this.axios.get(this.url).then(respuesta => {
       this.partidos = respuesta.data;
     });
+
+    this.axios.get(this.urlJugadores).then(respuesta => {
+      this.jugadores = respuesta.data;
+    });
   },
   methods: {
     async getPartido(partidoId) {
@@ -55,15 +59,7 @@ export default {
 
     async getJugador(jugadorId) {
       let jugador = await this.axios.get(`${this.urlJugadores}`);
-      
     },
-
-    unirAPartido() {
-      this.axios.post(this.urlPost).then(response => {
-        let nuevoJugador = response.data;
-        console.log(nuevoJugador);
-      });
-    }
 
   } 
 }

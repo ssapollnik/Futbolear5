@@ -7,7 +7,6 @@
     <b-nav tabs fill align="center">
         <b-nav-item active><router-link to='/'>Partidos</router-link></b-nav-item>
         <b-nav-item active><router-link to='/newMatch'>Crear Partido</router-link></b-nav-item>
-        <b-nav-item active><router-link to='/newPlayer'>Crear Jugador</router-link></b-nav-item>
     </b-nav>
     </div>
     <div id="listado">

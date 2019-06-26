@@ -1,5 +1,6 @@
 <template>
   <div id="newMatch" class="newMatch">
+    <h1>Crear Partido</h1>
     <div>
       <div style="margin-right: 10px">
     <label for="name">Nombre</label>
@@ -73,31 +74,21 @@ name: 'newMatch',
         fecha: null,
         hora: null
       },
-      //url: "https://demo8070547.mockable.io/add"
       url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/posts"
     }
   },
   methods: {
-    /*agregarPartido() {
-      const partido = {nombre: null, admin: null, fecha: null, hora: null}
-      partido.nombre = this.partidoNuevo.nombre
-      partido.admin = this.partidoNuevo.admin
-      partido.fecha = this.partidoNuevo.fecha
-      partido.hora = this.partidoNuevo.hora
-      console.log(JSON.stringify(partido))
-      this.partidos.push(partido)
-      this.inicializarNuevoPartido()
-    },
-    */
+
     agregarPartido() {
       this.axios.post(this.url, this.partidoNuevo).then(response => {
         console.log(response);
         let nuevoPartido = response.data;
+        console.log(nuevoPartido);
         this.partidos.push(nuevoPartido);
         this.inicializarNuevoPartido();
       });
     }, 
-      
+
     inicializarNuevoPartido(){
       this.partidoNuevo.nombre = null
       this.partidoNuevo.admin = null
