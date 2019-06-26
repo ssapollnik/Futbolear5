@@ -5,6 +5,7 @@
         "nombre": "Seba",
         "admin": "seba@ort.edu.ar",
         "fecha": "10/07/2019",
+        "hora": "17:00",
         "direccion": "Yatay 240"
     },
     {
@@ -12,6 +13,7 @@
         "nombre": "Santi",
         "admin": "santi@ort.edu.ar",
         "fecha": "07/07/2019",
+        "hora": "21:00",
         "direccion": "Rio de Janeiro 657"
     },
     {
@@ -19,6 +21,7 @@
         "nombre": "Max",
         "admin": "max@ort.edu.ar",
         "fecha": "15/07/2019",
+        "hora": "07:00",
         "direccion": "Calle Falsa 123"
     }
     ],
