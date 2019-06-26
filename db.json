@@ -27,20 +27,22 @@
       {
           "id": 1,
           "nombre": "Seba",
-          "mail": "seba@ort.edu.ar",
-          "apellido": "Sapollñik"
+          "apellido": "Sapollñik",
+          "mail": "seba@ort.edu.ar"
+
       },
       {
         "id": 2,
         "nombre": "Max",
-        "mail": "max@ort.edu.ar",
-        "apellido": "Szuchman"
+        "apellido": "Szuchman",
+        "mail": "max@ort.edu.ar"
+        
       },
       {
         "id": 3,
         "nombre": "Santi",
-        "mail": "santi@ort.edu.ar",
-        "apellido": "Abracciavento"
+        "apellido": "Abracciavento",
+        "mail": "santi@ort.edu.ar"
       }
       ],
 
