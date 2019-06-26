@@ -1,4 +1,51 @@
 {
+    "get":[
+    {
+        "id": 1,
+        "nombre": "Seba",
+        "admin": "seba@ort.edu.ar",
+        "fecha": "10/07/2019",
+        "hora": "19:30"
+    },
+    {
+        "id": 2,
+        "nombre": "Santi",
+        "admin": "santi@ort.edu.ar",
+        "fecha": "07/07/2019",
+        "hora": "20:00"
+    },
+    {
+        "id": 3,
+        "nombre": "Max",
+        "admin": "max@ort.edu.ar",
+        "fecha": "15/07/2019",
+        "hora": "15:30"
+    }
+    ],
+
+    "getJugadores":[
+      {
+          "id": 1,
+          "nombre": "Seba",
+          "mail": "seba@ort.edu.ar",
+          "apellido": "Sapollñik"
+      },
+      {
+        "id": 2,
+        "nombre": "Max",
+        "mail": "max@ort.edu.ar",
+        "apellido": "Szuchman"
+      },
+      {
+        "id": 3,
+        "nombre": "Santi",
+        "mail": "santi@ort.edu.ar",
+        "apellido": "Abracciavento"
+      }
+      ],
+
+
+
     "posts": [
       { "id": 1, "title": "Post 1" },
       { "id": 2, "title": "Post 2" },
