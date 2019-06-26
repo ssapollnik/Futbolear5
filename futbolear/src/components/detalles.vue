@@ -17,6 +17,10 @@
       <li>Direccion: {{partido.direccion}}</li>
       <button @click.prevent="unirAPartido" class="btn btn-success">Unirme al partido</button>
     </ul>
+    <div id="tablaJugadores">
+    <b-table striped hover :items="jugadores">
+    </b-table>
+    </div>
   </div>
   
   </div>
@@ -31,8 +35,10 @@ export default {
   data(){
     return {
       partidos: [],
+      jugadores: [],
       partidoSeleccionado: null,
       url: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/get?id=" + this.$route.params.id,
+      urlJugadores: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/getJugadores",
       urlPost: "https://my-json-server.typicode.com/ssapollnik/Futbolear5/posts"
     }
   },
@@ -45,6 +51,11 @@ export default {
     async getPartido(partidoId) {
       let partido = await this.axios.get(`${this.url}/${partidoId}`);
       this.partidoSeleccionado = partido
+    },
+
+    async getJugador(jugadorId) {
+      let jugador = await this.axios.get(`${this.urlJugadores}`);
+      
     },
 
     unirAPartido() {
